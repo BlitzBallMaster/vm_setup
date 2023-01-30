@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Choose VM
-echo -e "What VM are you in today?\nAnswer with number\n100. General\n150. Kali\n152. Caldera\n201. SIEM\n202. Logger\n203. Cuckoo\n240. Training"
+echo -e "What VM are you in today?\nAnswer with number\n100. General\n152. Caldera\n201. SIEM\n202. Logger\n203. Cuckoo\n240. Training"
 read vmnum
 
 #Set static IP
