@@ -33,5 +33,19 @@ docker run --name ntopng -it -d -p 3000:3000 --net=host ntop/ntopng:latest -i en
 echo "Rerunning netplan to ensure static IPs that changed go to intended static IPs"
 netplan apply
 
+#Configuring Suricata
+echo -e "Configuring suricata container"
 
-echo -e "Created ntopng container\nUse cmd 'docker exec -it ntopng /bin/bash' to access container"
+#Configuring Zeek
+echo -e "Configuring zeek container"
+
+#Configuring ntopng
+echo -e "Configuring ntopng container"
+
+#Container persistence
+echo -e "Setting containers to restart at reboot"
+docker update --restart unless-stopped suricata zeek ntopng
+
+#cron script (replace crontab to include updates & reboot)
+echo -e "Setting bash script to run at set time"
+
