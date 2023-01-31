@@ -22,7 +22,7 @@ cd /home/yuna/zeek
 git clone https://github.com/zeek/zeek-docker.git
 cd /home/yuna/zeek/zeek-docker
 make build-stamp_4.2.0
-docker run --name zeek -it -d  --net=host broplatform/bro:latest -i ens18 -i ens19
+docker run --name zeek -it -d --net=host broplatform/bro:latest -i ens18 -i ens19
 echo -e "Pulling and Creating ntop container"
 mkdir -p /home/yuna/ntop
 cd /home/yuna/ntop
