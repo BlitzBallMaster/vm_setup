@@ -17,5 +17,7 @@ git clone git@github.com:zeek/zeek-docker.git
 cd /home/yuna/zeek/zeek-docker
 make build-stamp_4.2.0
 echo -e "Pulling ntop container"
+mkdir /home/yuna/ntop
+cd /home/yuna/ntop
 docker run -it -p 3000:3000 -v $(pwd)/ntopng.license:/etc/ntopng.license:ro --net=host ntop/ntopng:latest -i eth0
 
