@@ -15,7 +15,7 @@ apt install make -y
 #Pull Containers
 echo -e "Pulling and Creating Suricata container"
 docker pull jasonish/suricata
-docker run --name suricata --rm -it --net=host --cap-add=net_admin --cap-add=net_raw --cap-add=sys_nice jasonish/suricata:latest -i ens18 -i ens19
+docker run --name suricata --rm -it -d --net=host --cap-add=net_admin --cap-add=net_raw --cap-add=sys_nice jasonish/suricata:latest -i ens18 -i ens19
 echo -e "Pulling and Creating Zeek container"
 mkdir -p /home/yuna/zeek
 cd /home/yuna/zeek
