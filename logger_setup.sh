@@ -25,5 +25,4 @@ echo -e "Pulling ntop container"
 mkdir -p /home/yuna/ntop
 cd /home/yuna/ntop
 docker pull ntop/ntopng
-docker run -it -d -p 3000:3000 -v $(pwd)/ntopng.license:/etc/ntopng.license:ro --net=host ntop/ntopng:latest -i ens19
-
+docker run -it -d -p 3000:3000 --net=host ntop/ntopng:latest -i ens18
