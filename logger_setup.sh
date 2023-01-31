@@ -13,7 +13,7 @@ docker pull jasonish/suricata
 echo -e "Pulling Zeek container"
 mkdir /home/yuna/zeek
 cd /home/yuna/zeek
-git clone git@github.com:zeek/zeek-docker.git
+git clone https://github.com/zeek/zeek-docker.git
 cd /home/yuna/zeek/zeek-docker
 make build-stamp_4.2.0
 echo -e "Pulling ntop container"
