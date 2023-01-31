@@ -46,6 +46,7 @@ echo -e "Configuring ntopng container"
 echo -e "Setting containers to restart at reboot"
 docker update --restart unless-stopped suricata zeek ntopng
 
-#cron script (replace crontab to include updates & reboot)
-echo -e "Setting bash script to run at set time"
-
+#Set crontab
+echo -e "Setting up crontab"
+echo -e "0 2 * * 5 bash /home/yuna/git/vm_setup/logger_cron.sh" > mycron
+crontab mycron
