@@ -13,16 +13,18 @@ apt install make -y
 
 
 #Pull Containers
-echo -e "Pulling Suricata container"
+echo -e "Pulling and Creating Suricata container"
 docker pull jasonish/suricata
-echo -e "Pulling Zeek container"
+docker run --name suricata --rm -it --net=host --cap-add=net_admin --cap-add=net_raw --cap-add=sys_nice jasonish/suricata:latest -i ens18 -i ens19
+echo -e "Pulling and Creating Zeek container"
 mkdir -p /home/yuna/zeek
 cd /home/yuna/zeek
 git clone https://github.com/zeek/zeek-docker.git
 cd /home/yuna/zeek/zeek-docker
 make build-stamp_4.2.0
-echo -e "Pulling ntop container"
+echo -e "Pulling and Creating ntop container"
 mkdir -p /home/yuna/ntop
 cd /home/yuna/ntop
 docker pull ntop/ntopng
 docker run --name ntopng -it -d -p 3000:3000 --net=host ntop/ntopng:latest -i ens18 -i ens19
+echo -e "Created ntopng container\nUse cmd 'docker exec -it ntopng /bin/bash' to access container"
