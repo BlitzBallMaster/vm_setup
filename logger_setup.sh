@@ -4,7 +4,7 @@
 
 #Set crontab
 echo -e "Setting up crontab"
-echo -e "0 2 * * 5 apt update\n0 3 * * 5 apt upgrade -y\n0 4 * * 5 shutdown -r" > mycron
+echo -e "0 2 * * 4 apt update && apt upgrade -y && shutdown -r" > mycron
 crontab mycron
 
 # Installing make
@@ -32,19 +32,6 @@ docker run --name ntopng -it -d -p 3000:3000 --net=host ntop/ntopng:latest -i en
 #Ensure static ips
 echo "Rerunning netplan to ensure static IPs that changed go to intended static IPs"
 netplan apply
-
-#Configuring Suricata
-echo -e "Configuring suricata container"
-
-#Configuring Zeek
-echo -e "Configuring zeek container"
-
-#Configuring ntopng
-echo -e "Configuring ntopng container"
-
-#Container persistence
-echo -e "Setting containers to restart at reboot"
-docker update --restart unless-stopped suricata zeek ntopng
 
 #Set crontab
 echo -e "Setting up crontab"
