@@ -29,8 +29,5 @@ netplan apply
 
 #Set crontab
 echo -e "Setting up crontab"
-echo -e "0 2 * * 5 bash /home/yuna/git/vm_setup/cron/logger_cron.sh" > mycron
+echo -e "0 2 * * 5 bash /home/yuna/git/vm_setup/cron/logger_update.sh" > mycron
 crontab mycron
-
-
-
