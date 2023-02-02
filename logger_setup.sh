@@ -2,15 +2,9 @@
 
 ##### Setup Steps in echos#####
 
-#Set crontab
-echo -e "Setting up crontab"
-echo -e "0 2 * * 4 apt update && apt upgrade -y && shutdown -r" > mycron
-crontab mycron
-
 # Installing make
 echo -e "Installing make"
 apt install make -y
-
 
 #Pull and Create Containers
 echo -e "Pulling and Creating Suricata container"
