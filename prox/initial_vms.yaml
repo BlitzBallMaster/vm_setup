@@ -1,0 +1,9 @@
+---
+- name: Initial Updates
+  hosts: initial_machines
+  tasks:
+    - name: Package update
+       apt: update_cache=yes force_apt_get=yes cache_valid_time=7200
+
+    - name: Package upgrades
+       apt: upgrade=dist force_apt_get=yes
