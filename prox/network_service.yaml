@@ -1,0 +1,9 @@
+---
+- name: Starts and enables the NetworkManager
+  hosts: all
+  tasks:
+  -    Name: starts NetworkManager
+       service:
+         name: NetworkManager
+         state: started
+         enabled: true
