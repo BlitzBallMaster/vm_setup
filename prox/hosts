@@ -1,6 +1,6 @@
 [all]
 zanarkand.spira.lan
-mtgagazet.spira.lan
+mtgagazet.spira.lan	ansible_connection=ssh	ansible_user=setup
 guadosalam.spira.lan
 bikanel.spira.lan
 kilika.spira.lan

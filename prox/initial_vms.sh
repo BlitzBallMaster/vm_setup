@@ -26,8 +26,9 @@ qm start 201&
 qm start 202&
 qm start 203&
 qm start 204&
+wait
 
 echo -e "Copying Ansible hosts file over"
 cp ./prox/hosts /etc/ansible/hosts
 
-echo -e "Next step would be to install OSs from the ISOs.\nThen run static_ip.yaml"
+echo -e "Next step would be to install OSs from the ISOs.\nThen run static_ip.sh"
