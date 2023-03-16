@@ -1,0 +1,14 @@
+---
+- name: Configuring first NIC
+  hosts: MtGagazet
+  vars:
+     target_mac: "CE:A6:1A:16:FD:15"
+     network_connection:
+          -  name: eth0
+             type: ethernet
+             mac: "{{ target_mac }}"
+             state:
+             ip :
+               dhcp: no
+               address:
+                    -  10.100.10.150/24

@@ -15,8 +15,8 @@ qm create 150 --name Kali --cdrom local:iso/kali-linux-2023.1-installer-amd64.is
 wait
 
 echo -e "Setting MACs"
-#qm set 150 --net0 virtio=CE:A6:1A:16:FD:15
-#qm set 150 --net1 virtio=76:D3:BA:30:24:15
+#eth0 CE:A6:1A:16:FD:15
+#eth1 76:D3:BA:30:24:15
 
 echo -e "Finished creating the following VMs and setting MACs"
 qm list
