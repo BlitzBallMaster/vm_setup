@@ -22,7 +22,7 @@ echo -e "Finished creating the following VMs and setting MACs"
 qm list
 
 echo -e "Moving ansible files over"
-#cp ./prox/hosts /etc/ansible/hosts
+#mv ./prox/hosts /etc/ansible/hosts
 
 echo -e "Running playbook to set static IPs"
 #ansible-playbook ./prox/static_ip.yaml

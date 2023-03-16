@@ -9,3 +9,14 @@ Baaj
 OmegaRuins
 
 [Training_Environment_1]
+
+all:
+  hosts:
+    Zanarkand
+    MtGagazet
+  blue:
+    Zanarkand
+  red:
+    MtGagazet
+  white:
+    Zanarkand

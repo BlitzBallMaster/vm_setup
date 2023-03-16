@@ -1,6 +1,6 @@
 ---
 - name: Configuring first NIC
-  hosts: MtGagazet
+  hosts: all
   vars:
      target_mac: "CE:A6:1A:16:FD:15"
      network_connection:
