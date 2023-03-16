@@ -31,4 +31,9 @@ wait
 echo -e "Copying Ansible hosts file over"
 cp ./prox/hosts /etc/ansible/hosts
 
+echo -e "Establishing SSH key"
+ssh-keygen -t rsa
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_proxmox
+
 echo -e "Next step would be to install OSs from the ISOs.\nThen run static_ip.sh"

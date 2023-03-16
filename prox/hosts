@@ -1,30 +1,37 @@
 [all]
-zanarkand.spira.lan
-mtgagazet.spira.lan	ansible_connection=ssh	ansible_user=setup
-guadosalam.spira.lan
-bikanel.spira.lan
-kilika.spira.lan
-besaid.spira.lan
-baaj.spira.lan
-omegaruins.spira.lan
+zanarkand.spira.lan	ansible_user=tidus
+mtgagazet.spira.lan	ansible_user=kimahri
+guadosalam.spira.lan	ansible_user=seymour
+bikanel.spira.lan	ansible_user=rikku
+kilika.spira.lan	ansible_user=wakka
+besaid.spira.lan	ansible_user=yuna
+baaj.spira.lan	ansible_user=lulu
+omegaruins.spira.lan	ansible_user=auron
 
 [blue]
-zanarkand.spira.lan
+zanarkand.spira.lan	ansible_user=tidus
+kilika.spira.lan	ansible_user=wakka
+besaid.spira.lan	ansible_user=yuna
+baaj.spira.lan	ansible_user=lulu
+omegaruins.spira.lan	ansible_user=auron
 
 [red]
-mtgagazet.spira.lan
+mtgagazet.spira.lan	ansible_user=kimahri
+guadosalam.spira.lan	ansible_user=seymour
 
 [white]
-zanarkand.spira.lan
+zanarkand.spira.lan	ansible_user=tidus
+bikanel.spira.lan	ansible_user=rikku
 
 [unix]
-zanarkand.spira.lan
-mtgagazet.spira.lan
-bikanel.spira.lan
-kilika.spira.lan
-besaid.spira.lan
-baaj.spira.lan
+zanarkand.spira.lan	ansible_user=tidus
+mtgagazet.spira.lan	ansible_user=kimahri
+bikanel.spira.lan	ansible_user=rikku
+kilika.spira.lan	ansible_user=wakka
+besaid.spira.lan	ansible_user=yuna
+baaj.spira.lan	ansible_user=lulu
+omegaruins.spira.lan	ansible_user=auron
 
 [window]
-guadosalam.spira.lan
-omegaruins.spira.lan
+guadosalam.spira.lan	ansible_user=seymour
+omegaruins.spira.lan	ansible_user=auron
