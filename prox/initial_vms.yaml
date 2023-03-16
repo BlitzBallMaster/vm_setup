@@ -1,6 +1,6 @@
 ---
 - name: Initial Updates
-  hosts: initial_machines
+  hosts: all
   tasks:
     - name: Package update
        apt: update_cache=yes force_apt_get=yes cache_valid_time=7200
