@@ -1,4 +1,4 @@
-[initial_machines]
+[all]
 Zanarkand
 MtGagazet
 Guadosalam
@@ -8,15 +8,11 @@ Besaid
 Baaj
 OmegaRuins
 
-[Training_Environment_1]
+[blue]
+Zanarkand
 
-all:
-  hosts:
-    Zanarkand
-    MtGagazet
-  blue:
-    Zanarkand
-  red:
-    MtGagazet
-  white:
-    Zanarkand
+[red]
+MtGagazet
+
+[white]
+Zanarkand
