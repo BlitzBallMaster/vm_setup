@@ -2,7 +2,12 @@
 - name: Initial Updates
   hosts: all
   tasks:
-  - name: Package update
-     apt: update_cache=yes force_apt_get=yes cache_valid_time=7200
-  - name: Package upgrades
-     apt: upgrade=dist force_apt_get=yes
+    - name: Package Update and Upgrades
+      apt:
+        name: "*"
+        state: latest
+        update_cache: yes
+
+    - name: Display stats of Update & Upgrades
+      debug:
+        msg: "{{updatesys.stdout_lines|last}}"
